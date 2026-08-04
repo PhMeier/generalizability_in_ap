@@ -70,7 +70,7 @@ if __name__ == "__main__":
     #assert config["model_name_or_path"] in testfile
     #assert config["model_name_or_path"] in config["tokenizer_name_or_path"]
 
-    #filename = "/home/philipp.meier/author_profiling_generalizability/data/pan14/full_text_test_str.tsv"
+
     #filename = TEST_SET_MAP[DATASET]
     print("Model Path: ", MODEL_PATH)
     print("DATA: ", DATASET)

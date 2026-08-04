@@ -13,8 +13,9 @@ from collections import Counter
 
 if __name__ == "__main__":
     filename_male = sys.argv[1]
-    filename_female = sys.argv[1]
-    outputfile = "pan_2017_prepro.tsv"
+    filename_female = sys.argv[2]
+    partition = sys.argv[3]
+    outputfile = f"pan_2017_{partition}_prepro.tsv"
     df_male = pd.read_csv(filename_male, sep="\t", encoding="utf-8", index_col=False,
                           quotechar='"', escapechar='\\', quoting=csv.QUOTE_ALL, lineterminator="\n")
     df_female = pd.read_csv(filename_female, sep="\t", encoding="utf-8", index_col=False,

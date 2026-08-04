@@ -40,10 +40,6 @@ def read_file_content_greedy(filename):
     # Extract everything between <post> and </post>, including newlines
     posts = re.findall(r"<post>(.*?)</post>", content, re.DOTALL | re.IGNORECASE)
 
-    # Clean up (optional)
-    # raw version:
-    #cleaned = [post for post in posts if post]
-    # for cleaned version exclude empty strings
     cleaned = [post.strip() for post in posts if post.strip()]
 
     return cleaned
@@ -113,10 +109,9 @@ def generate_csv_procedure():
     :return:
     """
     directory = "../data/blogs/*" # pascal
-    #directory = "C:/Users/phMei/Documents/PhD/Korpora/blogs/blogs/*" # local
-    # check for .male. and .female.
+
     files = glob.glob(directory)
-    #print(files)
+
     male = [f for f in files if ".male." in f]
     female = [f for f in files if ".female." in f]
 
@@ -124,8 +119,8 @@ def generate_csv_procedure():
     print(len(female))
     female_data = read_in_file(female)
     male_data = read_in_file(male)
-    flattened_list_females = [x for xs in female_data.values() for x in xs] # hier wird zuviel eingelesen!
-    flattened_list_males = [x for xs in male_data.values() for x in xs] # hier wird zuviel eingelesen!
+    flattened_list_females = [x for xs in female_data.values() for x in xs]
+    flattened_list_males = [x for xs in male_data.values() for x in xs]
     print(len(flattened_list_females))
     print(len(flattened_list_males))
     generate_csv_per_gender(male_data, 0, "all_male_blog_posts_raw.tsv")
@@ -133,8 +128,8 @@ def generate_csv_procedure():
 
 
 if __name__ == "__main__":
-    directory = "../../data/blogs/*" # pascal
-    #directory = "C:/Users/phMei/Documents/PhD/Korpora/blogs/blogs/*" # local
+    directory = "../../data/blogs/*"
+
     # check for .male. and .female.
     files = glob.glob(directory)
     #print(files)
@@ -145,8 +140,8 @@ if __name__ == "__main__":
     print(len(female))
     female_data = read_in_file(female)
     male_data = read_in_file(male)
-    flattened_list_females = [x for xs in female_data.values() for x in xs] # hier wird zuviel eingelesen!
-    flattened_list_males = [x for xs in male_data.values() for x in xs] # hier wird zuviel eingelesen!
+    flattened_list_females = [x for xs in female_data.values() for x in xs]
+    flattened_list_males = [x for xs in male_data.values() for x in xs]
     print(len(flattened_list_females))
     print(len(flattened_list_males))
 

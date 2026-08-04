@@ -456,7 +456,7 @@ def downsample_with_word_constraint(df, TARGET_AUTHORS=269):
         how="inner"
     )
 
-    sampled_authors_with_documents.to_csv(f"sampled_gutenberg_authors_{TARGET_AUTHORS}_authors.tsv",sep="\t", encoding="utf-8", # reddit_train_female_ap
+    sampled_authors_with_documents.to_csv(f"sampled_gutenberg_authors_{TARGET_AUTHORS}_authors.tsv",sep="\t", encoding="utf-8",
                             index=False, quotechar='"', escapechar='\\', quoting=csv.QUOTE_ALL, lineterminator="\n")
 
     print(s2.to_csv(sep="\t", index=False))
@@ -468,9 +468,7 @@ def downsample_with_word_constraint(df, TARGET_AUTHORS=269):
 
 if __name__ == "__main__":
 
-    # TODO: Cut einführen, start und beginn minus 10%
 
-    #df = pd.read_csv("C:/Users/phMei/Documents/PhD/Korpora/Project_Gutenberg/nlp_proj/nlp_proj_share/dataset_complete.csv", dtype={"book_id":str, "author_id":str}, index_col=False)
     df = pd.read_csv("dataset_complete_wikidata_gender_compared_final.csv", dtype={"book_id":str, "author_id":str}, index_col=False)
     path = "/nlp_proj/nlp_proj_share/whole_dataset/"
     df["author_x"] = df["author_x"].apply(

@@ -81,8 +81,8 @@ def routine(inputfile, model_name):
                               quotechar='"', escapechar='\\', quoting=csv.QUOTE_ALL, lineterminator="\n")
 
 if __name__ == "__main__":
-    filenames = "" # pan_2019_training.tsv
-    model_name = sys.argv[1]
+    filename = sys.argv[1] # pan_2019_training.tsv
+    model_name = sys.argv[2]
     assert model_name in model_to_sep
     print(f"Creating Author Profile for {model_name}")
     for fname in filenames:

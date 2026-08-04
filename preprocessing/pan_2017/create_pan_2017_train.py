@@ -80,7 +80,7 @@ if __name__ == "__main__":
     pan_2017_train_truth = "/pan17-author-profiling-training-dataset-2017-03-10/en/truth.txt"
 
 
-    outputfile = "pan_2017_test_Twitter_male.tsv"
+    outputfile = f"pan_2017_train_twitter_{gender}.tsv"
 
     truth_file = pan_2017_train_truth
 

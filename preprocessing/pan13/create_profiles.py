@@ -151,5 +151,6 @@ def routine_for_test_data(model_name):
 
 if __name__ == "__main__":
     model_name = sys.argv[1]  # "xlnet"
+    routine_for_extracted_data(model_name)
     routine_for_test_data(model_name)
 
