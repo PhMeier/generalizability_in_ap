@@ -9,7 +9,7 @@ Separator tokens are not correctly handled by stanza and are inserted after the 
 python3 mask_data_for_bert.py
 python mask_data_roberta_and_xlnet.py
 ```
-2) Add the separator tokens in the postprocess.
+2) Add the separator tokens in the postprocess. The data can then be used for finetuning
 ```
 python3 postprocess_add_separator_token_for_masked_data.py --input input_file_BERT_masked.tsv --model bert
 
