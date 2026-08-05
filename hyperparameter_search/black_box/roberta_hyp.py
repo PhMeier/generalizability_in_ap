@@ -97,11 +97,11 @@ if __name__ == "__main__":
         {"additional_special_tokens": ["[URL]"]}
     )
 
-    dataset_train = pd.read_csv(training_file, #"/home/philipp.meier/ap_with_sep/data/pan_17/pan_17_train_train_str_roberta.tsv", #train.tsv",
+    dataset_train = pd.read_csv(training_file,
                           delimiter='\t',quotechar='"', escapechar='\\', quoting=csv.QUOTE_ALL,
                             lineterminator="\n")
 
-    dataset_val = pd.read_csv(val_file, #"/home/philipp.meier/ap_with_sep/data/pan_17/pan_17_train_val_str_roberta.tsv", #validation.tsv",
+    dataset_val = pd.read_csv(val_file,
                           delimiter='\t',quotechar='"', escapechar='\\', quoting=csv.QUOTE_ALL,
                             lineterminator="\n")
 
